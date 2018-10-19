@@ -10,10 +10,24 @@
   <div id='app'></div>
 
   <script type='text/babel'>
+    function FriendsList (props) {
+      return (
+        <ul>
+          {props.list.map((name) => (
+            <li key={name}>
+              {name}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
     function App () {
+      const friends = ['Matty', 'Scotty', 'Mike', 'PJ', 'Eric']
+
       return (
         <div>
-          Hello World
+          <FriendsList list={friends} />
         </div>
       )
     }
