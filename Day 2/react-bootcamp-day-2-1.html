@@ -22,15 +22,18 @@
       )
     }
 
-    function App () {
-      const friends = ['Matty', 'Scotty', 'Mike', 'PJ', 'Eric']
+    class App extends React.Component {
+      render () {
+        const friends = ['Matty', 'Scotty', 'Mike', 'PJ', 'Eric']
 
-      return (
-        <div>
-          <FriendsList list={friends} />
-        </div>
-      )
+        return (
+          <div>
+            <FriendsList list={friends} />
+          </div>
+        )
+      }
     }
+
 
     ReactDOM.render(
       <App />,
